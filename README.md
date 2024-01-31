@@ -8,5 +8,6 @@ Online Book Store with Spring
 - PostgreSQL Driver
 - Lombok
 - Java Mail Sender
+- Thymeleaf
 
 WORK IN PROGRESS
