@@ -9,5 +9,6 @@ Online Book Store with Spring
 - Lombok
 - Java Mail Sender
 - Thymeleaf
+- HTML
 
 WORK IN PROGRESS
