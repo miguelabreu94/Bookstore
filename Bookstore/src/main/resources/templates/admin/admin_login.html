@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Login - Bookstore App</title>
+</head>
+<body>
+<div align="center">
+    <h2> Admin Login - BookStore</h2>
+    <form th:action="@{/admin/login}" method="post">
+        <table>
+            <tr>
+                <td>Email:</td>
+                <td><label>
+                    <input type = "email" required/>
+                </label>
+            </tr>
+            <tr>
+                <td>Password: </td>
+                <td><label>
+                    <input type="password" required />
+                </label></td>
+            </tr>
+            <tr><td>&nbsp;</td></tr>
+            <tr>
+                <td colspan="2" align="center"><input type="submit" value="Login"/>
+            </tr>
+        </table>
+    </form>
+
+</div>
+
+</body>
+</html>

@@ -1,6 +1,7 @@
 package services;
 import domain.Book;
 import domain.BookCategories;
+import org.hibernate.service.spi.ServiceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -30,8 +31,8 @@ public class BookService {
     }
 
     public void addNewBook(Book book) {
+        if(book.getName().startsWith("_")) throw new ServiceException("Não é possível iniciar com _");
         bookRepository.save(book);
-        System.out.println(book);
     }
 
     public void deleteBook(long bookId){
@@ -40,6 +41,10 @@ public class BookService {
             throw new IllegalStateException("book with id " + bookId + " does not exist");
         }
         bookRepository.deleteById(bookId);
+    }
+
+    public Book editBook(Book book){
+        return bookRepository.save(book);
     }
 
 }
