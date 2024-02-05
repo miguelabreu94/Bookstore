@@ -22,4 +22,10 @@ public class MainController {
         return "user/user_login";
     }
 
+    @GetMapping("/user/registration")
+    public String viewUserRegistrationPage(){
+        System.out.println("user register");
+        return "user/user_registration";
+    }
+
 }

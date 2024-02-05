@@ -4,7 +4,6 @@ import domain.BookCategories;
 import org.hibernate.service.spi.ServiceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
 import repository.BookRepository;
 
 import java.util.List;
@@ -46,5 +45,7 @@ public class BookService {
     public Book editBook(Book book){
         return bookRepository.save(book);
     }
+
+
 
 }
