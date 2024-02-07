@@ -10,6 +10,5 @@ import java.util.Optional;
 @Repository
 @Transactional(readOnly = true)
 public interface AppUserRepository extends CrudRepository<AppUser,Integer> {
-
     public Optional<AppUser> findAppUserByEmail(String email);
 }

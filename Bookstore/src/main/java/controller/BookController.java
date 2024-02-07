@@ -54,7 +54,7 @@ public class BookController {
     @RequestMapping("/mybooks/{id}")
     public String saveMyBook(@PathVariable("id") int id){
         Book b = bookService.getBookById(id).orElseThrow();
-        MyBookCart mb = new MyBookCart(b.getId(),b.getName(),b.getAuthor(),b.getPrice());
+        MyBookCart mb = new MyBookCart(b.getId(),b.getName(),b.getAuthor(),b.getCategory(),b.getPrice());
         myBookCartService.saveMyBooks(mb);
         return "myBook saved";
     }

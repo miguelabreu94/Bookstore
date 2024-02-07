@@ -20,6 +20,8 @@ public class MyBookCart {
     private long id;
     private String name;
     private String author;
+    private BookCategories category;
     private double price;
 
 }
+
