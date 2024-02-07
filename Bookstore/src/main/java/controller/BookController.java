@@ -3,7 +3,6 @@ import domain.Book;
 import domain.BookCategories;
 import domain.MyBookCart;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.bind.annotation.*;
 import services.BookService;
